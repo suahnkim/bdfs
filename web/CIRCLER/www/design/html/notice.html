@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<?php include "../inc/top.html"; ?> 
+</head>
+<body>
+<?php include "../inc/header.html"; ?>
+<div id="wrap">
+	<?php include "../inc/leftmenu.html"; ?>
+	<div class="contents">
+		<p class="mytit"><img src="../img/customer_tit.png" alt=""> 고객센터</p>
+		<div class="table_wrap">
+			<ul class="cutomer_tab">
+			<li class="on" >공지사항</li>
+			<li onclick="location.href='inquiry.html' ">1:1 문의</li>
+			<li onclick="location.href='inquiry_list.html' ">내 문의 내역</li>
+			</ul>
+			<ul class="acco_tit">
+				<li class="acco_no">번호</li><li class="acco_tit" style="text-align:center">제목</li><li class="acco_date">등록일</li><li class="acco_arrow"></li>
+			</ul>
+			<ul id="example2" class="accordion">
+                <li>
+                    <h3>
+					<div class="acco_no">10</div><div class="acco_tit">공지사항이 들어갑니다</div><div class="acco_date">2019-10-01</div><div class="acco_arrow"><img src="../img/icon_arrow_down.png" alt=""></div>
+					</h3>
+                    <div class="panel loading">
+                        <p>Plain old heading and paragraph content.</p>
+						<div class="acco_btnbox">
+							<button class="btn_graybox">X 닫기</button>
+						</div>
+                    </div>
+                </li>
+				<li>
+                    <h3>
+					<div class="acco_no">09</div><div class="acco_tit">공지사항이 들어갑니다 타이틀이 들어갑니다</div><div class="acco_date">2019-10-01</div><div class="acco_arrow"><img src="../img/icon_arrow_down.png" alt=""></div>
+					</h3>
+                    <div class="panel loading">
+                        <p>Plain old heading and paragraph content. <br/>Plain old heading and paragraph content. <br/>Plain old heading and paragraph content.</p>
+						<div class="acco_btnbox">
+							<button class="btn_graybox">X 닫기</button>
+						</div>
+                    </div>
+                </li>   
+            </ul>
+		</div>
+	</div>
+	<?php include "../inc/footer.html"; ?>
+</div>
+</body>
+</html>
+ <script type="text/javascript" src="../js/jquery-1.4.2.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../js/jquery.accordion.2.0.js" charset="utf-8"></script>
+<script type="text/javascript">
+            $('#example1, #example3').accordion();
+            $('#example2').accordion({
+                canToggle: true
+            });
+            $('#example4').accordion({
+                canToggle: true,
+                canOpenMultiple: true
+            });
+            $(".loading").removeClass("loading");
+        </script>

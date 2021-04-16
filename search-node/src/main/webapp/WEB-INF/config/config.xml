@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tomahawk>
+	<serverName>MediaBlockChain SearchServer</serverName>
+	<extras>
+		<!-- 인덱싱 작업 수행시 동시작업 쓰레드 -->
+		<field name="batch.index.thread" type="integer">5</field>
+		
+		<!-- 다운로드 작업 수행시 동시작업 쓰레드 -->
+		<field name="batch.download.thread" type="integer">5</field>
+		
+		
+		
+		<!-- elasticsearch 접속 주소 -->
+		<field name="elasticsearch.host"   type="string">localhost</field>
+		<field name="elasticsearch.port"   type="integer">9200</field>
+		<field name="elasticsearch.schema" type="string">http</field>
+		
+		
+		<!-- 복합컨텐츠 다운로드 경로-->
+		<field name="cc.basedir" type="string">/home/user/datastore/cc</field>
+		
+		<!-- IPFS 경로-->
+		<field name="ipfs.path" type="string">/usr/local/go/bin/ipfs</field>
+		
+		
+		
+		<!-- 다운로드 완료 노티 주소 (체인링크)-->
+		<field name="download_complate_url"  type="string">http://localhost:55441/product/setSearchNode</field>
+	</extras>
+</tomahawk>

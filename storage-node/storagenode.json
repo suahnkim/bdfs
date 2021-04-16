@@ -1,0 +1,19 @@
+{
+    "MaxDownRetry": 3,
+    "BeginTimeout": 30,
+    "DownTimeout": 60,
+    "AccountID": "",
+    "Password": "",
+    "PurchaseID": "0",
+    "OnchainIP": "127.0.0.1",
+    "OnchainPort": 55442,
+    "ListenPort": 8085,
+    "saveContent": true,
+    "DBMS": 
+    {
+        "Host":"",
+        "Account":"",
+        "Password":"",
+        "Schema":""
+    }
+}

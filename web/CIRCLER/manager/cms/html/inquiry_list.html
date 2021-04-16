@@ -1,0 +1,72 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<?php include "../inc/top.html"; ?> 
+</head>
+<body>
+<?php include "../inc/header.html"; ?>
+<div id="wrap">
+	<?php include "../inc/leftmenu.html"; ?>
+	<div class="containbox">
+		<div class="contents">
+			<p class="subTit">1:1 문의</p>
+			<table class="sty02">
+				<colgroup>
+					<col width="15%"/><col width="35%"/><col width="15%"/><col width="35%"/>
+				</colgroup>
+				<tr>
+				   <th>작성일</th>
+				   <td colspan="3"><span class="alignment01"><input type="text" name="" placeholder="전체" class="inp01"/> ~ <input type="text" name="" placeholder="전체" class="inp01" /></span><span class="alignment02"><button class="btn_gray01">당일</button><button class="btn_gray01">1개월</button><button class="btn_gray01">3개월</button></span></td>
+				</tr>
+				<tr>
+				   <th>제목</th>
+				   <td colspan="3"><input type="text" name="" class="inp03" /></td>
+				</tr>
+				<tr>
+				   <th>상태</th>
+				   <td>
+						<div class="select">
+							<select name="" style="width:130px;">
+								<option value="" selected>전체</option>
+								<option value="">대기중</option><option value="">답변완료</option>
+							</select>
+						</div>
+				   </td>
+				   <th>회원(이메일 주소)</th>
+				   <td><input type="text" name="" placeholder="이메일 주소 입력"  class="inp03"/></td>
+				</tr>
+			</table>
+			<p class="btnbox"><button class="btn_blue01">검색</button></p>
+			
+			<ul class="memSearch" style="margin-top:30px">
+				<li>검색건수 <span class="searchNum">총 3건</span></li>
+				<li><div class="select">
+						<select name="" style="width:130px;">
+							<option value="" selected>20개씩 보기</option>
+							<option value="">50개씩 보기</option><option value="">100개씩 보기</option>
+						</select>
+					</div>
+				</li>
+			</ul>
+			<table class="sty03">
+				<colgroup>
+					<col width="10%"/><col width="*"/><col width="25%"/><col width="15%"/><col width="10%"/>
+				</colgroup>
+				<tr>
+				   <th>번호</th><th>제목</th><th>이메일 주소</th><th>등록일</th><th>상태</th>
+				</tr>
+				<tr>
+				   <td>10</td><td class="left"><a href="inquiry_view.html">다운로드가 되지 않습니다</a></td><td>honggildong@naver.com</td><td>2019-10-05<br/>10:04:01</td><td><span class="txt_red">대기중</span></td>
+				</tr>
+				<tr>
+				   <td>09</td><td class="left"><a href="inquiry_view.html">환영합니다 <i class="fas fa-paperclip"></i></a></td><td>dev@daum.net</td><td>2019-10-01<br/>08:20:30</td><td>답변완료</td>
+				</tr>				
+			</table>
+			<ul class="pagenum">
+				<li class="arr"><i class="fas fa-chevron-left"></i></li><li class="on"><a href="#">1</a></li><li><a href="#">2</a></li><li><a href="#">3</a></li><li><a href="#">4</a></li><li><a href="#">5</a></li><li class="arr"><i class="fas fa-chevron-right"></i></li>
+			</ul>
+		</div>
+		<?php include "../inc/footer.html"; ?>
+	</div>
+</div>
+</body>
+</html>

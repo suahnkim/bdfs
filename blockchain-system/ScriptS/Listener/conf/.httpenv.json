@@ -1,0 +1,5 @@
+{
+    "RegURL":"http://127.0.0.1"
+    , "RegPort":55442
+    , "SubURL" :"/mediablockchain/content/register"
+}

@@ -1,0 +1,60 @@
+@charset "utf-8";
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.body{font-family: "Noto Sans KR", sans-serif;}
+.wrap{ width:100%; margin:0 auto;}
+.container_login {width: 100%;  min-height: 100vh; /*vh 요소는 높이값의 100분의 1의 단위*/display: -webkit-box;display: -webkit-flex;display: -moz-box;display: -ms-flexbox;display: flex;flex-wrap: wrap;justify-content: center;align-items: center;padding: 15px;background-image:url(../img/login/bg.jpg); background-repeat: no-repeat;background-position: center;background-size: cover;box-sizing: border-box;}
+.wrap_login {width: 500px; min-height:830px;background: #fff;border-radius: 10px;overflow: hidden;}
+
+h2{font-size:0;}
+.logo{position:relative; width:210px; height:65px; display:block; margin:70px auto; background:url(../img/login/logo_210_65.png) no-repeat;}
+.login_contents{display:block; padding:0 49px;}
+.login_contents .select_list{margin:25px 0;}
+.login_contents .select_list h4{margin:0;font-size:22px; font-weight:600; line-height:26px;}
+.login_contents .select_list h5{margin:0 0 15px 0;font-size:12px; line-height:16px; font-weight:400; color:#7e7e7e;}
+.login_contents .select_list .jca-account-list {display:block; width:100%; height:auto; max-height:360px; overflow-x:hidden; overflow-y:scroll;}
+.login_contents .select_list a{display:block; border:1px solid #c9c9c9; border-radius: 7px; margin:10px 0;}
+.login_contents .select_list a:link{ text-decoration:none; color:#6c6c6c;}
+.login_contents .select_list a:hover,.select_list a:active,.select_list a:focus{border:1px solid #6931cb;}
+
+.login_contents .select_list .login_select_box dl{height:40px;font-size:14px; color:#7e7e7e;}
+.login_contents .select_list .login_select_box dd{margin:0;  padding:1px 16px; line-height:18px;}
+.login_contents .select_list .login_select_box dd.txt_email_nolink{color:#a4a4a4; font-weight:500;}
+.login_contents .select_list .login_select_box dd.txt_email{color:#565656; font-weight:600;}
+.login_contents .btn_login_type01{display:block; width:100%; background-color:#6775e0; border:1px solid #4752a9;border-radius: 7px; color:#fff; text-align:center; font-size:14px; line-height:45px;}
+.login_contents .login_foot{margin-top:36px; cursor:pointer;}
+.login_contents .login_foot a{text-decoration:none; display:block; font-size:12px; color:#6775e0; font-weight:600;}
+.login_contents .login_foot a.btn01{float:left;}
+.login_contents .login_foot a.btn02{float:right;}
+
+.login_contents .login_form{width:100%;}
+.login_contents input {outline: none;border: none;}
+.login_contents .label_input{font-size: 20px;line-height: 1.5;padding-left: 7px;}
+.login_contents .label_sub{margin:0;font-size:11px; line-height:16px; font-weight:400; color:#7e7e7e; margin-bottom:25px; letter-spacing:-0.3px;}
+.login_contents .wrap_input{width: 100%;position: relative; border-bottom: 2px solid #d9d9d9; margin-bottom:45px;}
+.wrap_input .input {font-size: 14px;color: #7e7e7e;line-height: 1.2;display: block;width: 100%; height: 55px;background: transparent;padding: 0 7px 0 10px;}
+.focus_input {position: absolute;display: block;width: 100%;height: 100%;top: 0;left: 0;pointer-events: none;}
+.focus_input::after {content: attr(data-symbol);color: #adadad;font-size: 20px;display: -webkit-box;display: -webkit-flex;display: -moz-box;display: -ms-flexbox;display: flex;align-items: center;justify-content: center; position: absolute;height: calc(100% - 20px);bottom: 0;left: 0;padding-left: 13px; padding-top: 3px;}
+.focus_input::before {content: "";display: block;position: absolute; bottom: -2px;left: 0;width: 0; height: 2px; background: #7f7f7f;-webkit-transition: all 0.4s;-o-transition: all 0.4s; -moz-transition: all 0.4s;transition: all 0.4s;}
+.input:focus + .focus_input::before {width: 100%;}
+.input:focus + .focus_input::after {color: #a64bf4;}
+
+.login_contents .note_box{font-size:12px; color:#ff0000; line-height:16px; padding-inline-start: 0px; padding:7px;}
+.login_contents .note_box li{list-style:none; margin-bottom: 5px; font-weight:600;}
+
+.wrap_input.pick .input{font-size: 14px;color: #d9d9d9;line-height: 1.2;display: block;width: 100%; height: 55px;background: transparent;padding: 0 7px 0 10px; font-weight:600;}
+.wrap_input.pick .focus_input::before {width: 100%;}
+
+.login_contents .none_list{display:block; margin:25px 0;}
+.login_contents .none_list p{margin:0;font-size:18px; font-weight:600; line-height:26px; text-align:center;}
+
+.login_contents .login_step03{display:block; margin:25px 0;}
+.login_contents .login_step03 .txt_bk18{margin:0;font-size:18px; font-weight:500; line-height:26px; text-align:center;}
+.login_contents .login_step03 .txt_pl18{margin:0;font-size:18px; font-weight:600; line-height:26px; text-align:center; color:#6a38c1;}
+.login_contents .login_step03 .txt_gr12{font-size: 11px;color: #6a6a6a; font-weight:500;line-height:50px;text-align:center;}
+
+.login_contents .create_step01{display:block; margin:25px 0;}
+.login_contents .create_step01 .txt_bk18{margin:0;font-size:18px; font-weight:500; line-height:26px;}
+.login_contents .create_step01 .txt_bk18.center{text-align:center;}
+.login_contents .create_step01 .txt_pl18{margin:0;font-size:18px; font-weight:600; line-height:26px; color:#6a38c1;}
+.login_contents .create_step01 .txt_gr12{font-size: 11px;color: #6a6a6a; font-weight:500;line-height:50px;text-align:center;}

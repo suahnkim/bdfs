@@ -1,0 +1,38 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<?php include "../inc/top.html"; ?> 
+	<script type="text/javascript" src="/assets/cheditor/cheditor.js"></script>	
+</head>
+
+<body>
+<?php include "../inc/header.html"; ?>
+<div id="wrap">
+	<?php include "../inc/leftmenu.html"; ?>
+	<div class="containbox">
+		<div class="contents">
+			<p class="subTit">공지사항 작성</p>			
+			<table class="sty02">
+				<colgroup><col width="20%"><col width="*"></colgroup>
+				<tr>
+					<th>제목</th>
+				   <td><input type="text"  name="" class="inp03"/></td>
+				</tr>
+				<tr>
+					<th>내용</th>
+				   <td><textarea name="content" id="editor" ></textarea></td>
+				</tr>			
+			</table>			
+			<p class="btnbox"><button class="btn_blue03" style="margin-right:10px;" onclick="location.href='notice_list.html' ">돌아가기</button><button class="btn_blue01" onclick="location.href='notice_write.html' ">작성하기</button></p>	
+		</div>
+		<?php include "../inc/footer.html"; ?>
+	</div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    var myeditor = new cheditor();              // 에디터 개체를 생성합니다.
+    myeditor.config.editorHeight = '340px';     // 에디터 세로폭입니다.
+    myeditor.config.editorWidth = '100%';       // 에디터 가로폭입니다.
+    myeditor.inputForm = 'editor';             // 위에 있는 textarea의 id입니다. 주의: name 속성 이름이 아닙니다.
+    myeditor.run();                             // 에디터를 실행합니다.
+</script>

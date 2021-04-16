@@ -1,0 +1,6 @@
+sess/*
+www/application/config/constants.php
+www/application/config/database.php
+www/data/*
+manager/application/config/constants.php
+manager/application/config/database.php

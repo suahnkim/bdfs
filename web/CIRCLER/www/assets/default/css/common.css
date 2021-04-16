@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+* {margin:0;padding:0;-webkit-text-size-adjust:none;}
+html {width:100%;height:100%;}
+*html{background-color:#fff; height:1px}/* IE6 잔상방지 */
+
+body{width:100%;height:100%;}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+dl,dt,tt,ol,ul,li{list-style:none;}
+input,select,img,fieldset{vertical-align:middle; border:0}
+table{ width:100%; border-spacing:0; border-collapse:collapse; word-break:break-all; }
+hr{clear:both;height:40px; border:0; size:0;}
+caption{display:none}
+legend{display:none}
+h1, h2, h3, h4, h5, h6, h7{font-weight:normal; display:block}
+address,caption,cite,code,dfn,em,var{ font-style:normal; font-weight:normal; }
+
+input[type=checkbox], input[type=radio]{vertical-align:middle;}
+input[type=email],input[type=text],input[type=password],input[type=number]{border:1px solid;border-color:#d8d8d8;margin:0; padding:0 5px; height:25px;}
+textarea{border:1px solid;border-color:#d8d8d8;margin:0; padding:10px;}
+select{border:1px solid;border-color:#d8d8d8;margin:0;padding:5px;font-size:12px;height:29px;}
+input[type=email]:focus,input[type=text]:focus,input[type=password]:focus,input[type=number]:focus,textarea:focus,select:focus{border:1px solid #428bca}
+textarea{resize: none} /* 크롬,사파리 */
+input[type=image]{vertical-align:middle;cursor:pointer;_cursor /**/:hand}
+input[type=file]{height:20px;vertical-align:middle}
+input.upload{height:19px;_height:21px;line-height:19px}
+button{border: 0; background: transparent; cursor: pointer;}
+input.input{-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+
+a:link{color:#666666;text-decoration:none}
+a:visited{color:#666666;text-decoration:none}
+a:active{color:#666666;text-decoration:none}
+a:hover{color:#666666;text-decoration:none}
+
+.png{tmp:expression(setPng(this))}
+.hide{display:none}
+
+#loading_ajax {width: 100%;height: 100%;background-color: rgba(0,0,0,0.7);position: fixed;z-index: 9999;top:0px;display:none;}
+#loading_ajax .img {width: 30px;height: 25px;padding-top: 2px;background-color: #FFFFFF;border-radius: 0.3em;border: 1px solid #EAEAEA;position: absolute;z-index: 135;top: 50%;left: 50%;text-align: center;vertical-align: middle;}
+
+#popup_loading_ajax {width:822px;height:162px;background-color: rgba(0,0,0,0.7);position: absolute;z-index: 9999;display:none;left:-20px;top:167px;}
+#popup_loading_ajax .img {width: 160px;background-color: #FFFFFF;border-radius: 0.3em;border: 1px solid #EAEAEA;position: absolute;z-index: 135;top: 35%;left: 45%;text-align: center;}

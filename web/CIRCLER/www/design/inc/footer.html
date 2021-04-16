@@ -1,0 +1,71 @@
+<style>
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 100; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+<div class="footer">
+	<p class="foot_btnArea">
+	<a href="#" class="myBtn_multi">이용약관</a>
+	<a href="#" class="myBtn_multi">개인정보처리방침</a>
+	</p>
+	<p>본 콘텐츠의 저작권은 저작권자에 있으며, 이를 무단으로 이용하는 경우 저작권법 등에 따라 법적 책임을 질 수 있습니다.</p>
+	<p>Copyright  ⓒGaonSDS.  All right reserved.</p>
+</div>
+<!-- The Modal -->
+    <div class="modal modal_multi">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close close_multi">×</span>
+            <?php include "policy.html"; ?>
+        </div>
+
+    </div>
+
+    <!-- The Modal -->
+    <div  class="modal modal_multi">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close close_multi">×</span>
+            <?php include "privacy.html"; ?>
+        </div>
+
+    </div>
+
+<script src="../js/common.js"></script>

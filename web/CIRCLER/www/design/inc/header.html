@@ -1,0 +1,57 @@
+<div class="header">
+	<div class="topgnb">		
+		<div class="logo"><a href="index.html"><img src="../img/logo.png" alt="Circler"></a></div>	
+		<div class="group_srch">
+			<form>
+				<label for="inp_srch" class="blind"></label>			
+				<input type="search" autocomplete="off" placeholder="Search " value="">
+				<button type="submit" class="btn_srch"><span class="ico_srch">검색</span></button>
+			</form>
+		</div>		
+		 <!--로그인후-->
+		<ul class="Myaccout">
+			<li>
+				<button  class="ic_my" onclick="myFunction()"></button>
+				<div id="myDropdown" class="dropdown-content">
+					<div class="arrow_box">
+						<ul class="toploginbox">
+							<li>1ee77618b9esf7651381e2ede71b0d389f27a65c61b01b0d389f2ㅇㄹㅇㄹㅇㄹㄴ</li>
+							<li>jinsuk5421@naver.com</li>
+							<li><i class="far fa-check-circle"></i><a href="#"> 로그아웃</a></li>
+						</ul>
+					</div>					
+				 </div>
+			</li>
+			<li><span class="ic_eth"></span>21,131 ETH</li>
+			<li><span class="ic_way"></span>12,210,201 WAY</li>
+		</ul>		
+	</div>
+
+	<ul class="nav">
+		<li class="on"><a href="index.html">HOME</a></li>
+		<li><a href="#">인기 콘텐츠</a></li>
+		<li><a href="#">새로운 콘텐츠</a></li>
+		<li><a href="#">추천 콘텐츠</a></li>
+	</ul>
+</div>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>

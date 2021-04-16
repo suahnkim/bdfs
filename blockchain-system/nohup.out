@@ -1,0 +1,1 @@
+usage: ./FirstNetwork.sh {setup|start_webclient|start_hotwalletserver|start_loomnetwork|run_loomnetwork|start_ganache|run_ganache|start_geth|deploy_gateway_ganache|deploy_gateway_geth|deploy_gateway_rinkeby|deploy_btoken_extdev}

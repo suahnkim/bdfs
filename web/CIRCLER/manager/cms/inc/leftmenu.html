@@ -1,0 +1,51 @@
+<div id="snb">
+	<div class="tab">
+	  <button class="tablinks" onclick="openCity(event, 'leftmenu01')" id="defaultOpen"><img src="../img/icon_menu01.png" alt=""><br/>회원 관리</button>
+	  <button class="tablinks" onclick="openCity(event, 'leftmenu02')"><img src="../img/icon_menu02.png" alt=""><br/>콘텐츠 관리</button>
+	  <button class="tablinks" onclick="openCity(event, 'leftmenu03')"><img src="../img/icon_menu03.png" alt=""><br/>구매 관리</button>
+	  <button class="tablinks" onclick="openCity(event, 'leftmenu04')"><img src="../img/icon_menu04.png" alt=""><br/>판매 관리</button>
+	  <button class="tablinks" onclick="openCity(event, 'leftmenu05')"><img src="../img/icon_menu05.png" alt=""><br/>고객센터</button>
+	</div>
+
+	<ul id="leftmenu01" class="tabcontent">
+		<li><span class="submenu_on"><a href="member_list.html">회원 목록</a></span></li>
+		<li><span class="submenu"><a href="adult_list.html">성인 인증 신청 목록</a></span></li>
+	</ul>
+
+	<ul id="leftmenu02" class="tabcontent snbmap02">
+		<li><span class="submenu"><a href="content_mgt.html">콘텐츠 유통 관리</a></span></li>
+	</ul>
+
+	<ul id="leftmenu03" class="tabcontent snbmap03">
+		<li><span class="submenu"><a href="purchase.html">회원 구매 현황</a></span></li>
+		<li><span class="submenu"><a href="wei_change.html">WEI 전환 현황</a></span></li>
+	</ul>
+
+	<ul id="leftmenu04" class="tabcontent snbmap04">
+		<li><span class="submenu"><a href="content_sale.html">콘텐츠 판매 현황</a></span></li>
+	</ul>
+
+	<ul id="leftmenu05" class="tabcontent snbmap05">
+		<li><span class="submenu"><a href="notice_list.html">공지사항</a></span></li>
+		<li><span class="submenu"><a href="inquiry_list.html">1:1 문의</a></span></li>
+	</ul>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>

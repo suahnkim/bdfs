@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<?php include "../inc/top.html"; ?> 
+</head>
+<body>
+
+<?php include "../inc/header.html"; ?>
+<div id="wrap">
+	<?php include "../inc/leftmenu.html"; ?>
+	<div class="contents">
+		<p class="mytit"><img src="../img/usein_tit.png" alt=""> WAY 이용내역</p>
+		<div class="table_wrap">
+			<ul class="mywaylist">
+				<li>적립 : 5,000  WAY</li><li>사용 : 200  WAY</li>
+			</ul>
+			<div class="myconSearch">
+				<div class="calendarBox">
+					<input type="text" name=""/>
+				</div>
+				<span class="period"></span>
+				<div class="calendarBox">
+					<input type="text" name=""/>
+				</div>
+				<div class="custom-select" style="width:120px;">			
+					<select name="select">
+					 <option value="value1">선택</option> 
+					 <option value="value2">전체</option>
+					 <option value="value2">적립</option>
+					 <option value="value3">사용</option>
+					</select>
+				</div>
+				<button class="btn_graybox">조회</button>
+			</div>
+			<table class="sty01">
+				<colgroup><col width="20%"><col width="35%"><col width="15%"><col width="15%"><col width="15%"></colgroup>
+				<tr>
+				   <th></th><th>내용</th><th>구분</th><th>날짜</th><th>금액</th>
+				</tr>
+				<tr>
+					<td>
+						<div class="useway">
+							사용
+						</div>
+					</td>
+					<td class="align_left"><a href="#">이더리움  →  WAT 전환</a></td><td>WAT 전환</td><td>2019.02.25</td><td><span class="usetxt">- 100</span></td>
+			    </tr>
+				<tr>
+					<td>
+						<div class="saveway">
+							적립
+						</div>
+					</td>
+					<td class="align_left"><a href="#">고양이 샤워시키기</a></td><td>콘텐츠 다운로드</td><td>2019.02.01</td><td><span class="savetxt">+ 5,000</span></td>
+			    </tr>
+		    </table>
+		</div>
+	</div>	
+	<?php include "../inc/footer.html"; ?>
+</div>
+</body>
+</html>
+<script>
+var x, i, j, selElmnt, a, b, c;
+/*look for any elements with the class "custom-select":*/
+x = document.getElementsByClassName("custom-select");
+for (i = 0; i < x.length; i++) {
+  selElmnt = x[i].getElementsByTagName("select")[0];
+  /*for each element, create a new DIV that will act as the selected item:*/
+  a = document.createElement("DIV");
+  a.setAttribute("class", "select-selected");
+  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+  x[i].appendChild(a);
+  /*for each element, create a new DIV that will contain the option list:*/
+  b = document.createElement("DIV");
+  b.setAttribute("class", "select-items select-hide");
+  for (j = 1; j < selElmnt.length; j++) {
+    /*for each option in the original select element,
+    create a new DIV that will act as an option item:*/
+    c = document.createElement("DIV");
+    c.innerHTML = selElmnt.options[j].innerHTML;
+    c.addEventListener("click", function(e) {
+        /*when an item is clicked, update the original select box,
+        and the selected item:*/
+        var y, i, k, s, h;
+        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+        h = this.parentNode.previousSibling;
+        for (i = 0; i < s.length; i++) {
+          if (s.options[i].innerHTML == this.innerHTML) {
+            s.selectedIndex = i;
+            h.innerHTML = this.innerHTML;
+            y = this.parentNode.getElementsByClassName("same-as-selected");
+            for (k = 0; k < y.length; k++) {
+              y[k].removeAttribute("class");
+            }
+            this.setAttribute("class", "same-as-selected");
+            break;
+          }
+        }
+        h.click();
+    });
+    b.appendChild(c);
+  }
+  x[i].appendChild(b);
+  a.addEventListener("click", function(e) {
+      /*when the select box is clicked, close any other select boxes,
+      and open/close the current select box:*/
+      e.stopPropagation();
+      closeAllSelect(this);
+      this.nextSibling.classList.toggle("select-hide");
+      this.classList.toggle("select-arrow-active");
+    });
+}
+function closeAllSelect(elmnt) {
+  /*a function that will close all select boxes in the document,
+  except the current select box:*/
+  var x, y, i, arrNo = [];
+  x = document.getElementsByClassName("select-items");
+  y = document.getElementsByClassName("select-selected");
+  for (i = 0; i < y.length; i++) {
+    if (elmnt == y[i]) {
+      arrNo.push(i)
+    } else {
+      y[i].classList.remove("select-arrow-active");
+    }
+  }
+  for (i = 0; i < x.length; i++) {
+    if (arrNo.indexOf(i)) {
+      x[i].classList.add("select-hide");
+    }
+  }
+}
+/*if the user clicks anywhere outside the select box,
+then close all select boxes:*/
+document.addEventListener("click", closeAllSelect);
+</script>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<settings>
+		<setting name="mapUnderscoreToCamelCase" value="true" />
+	</settings>
+	
+	<typeAliases>
+		<!-- 
+		<typeAlias alias="administratorVO" type="msi.dingastar.vo.AdministratorVO"/>
+		<typeAlias alias="albumVO"         type="msi.dingastar.vo.AlbumVO"/>
+		<typeAlias alias="artistVO"        type="msi.dingastar.vo.ArtistVO"/>
+		<typeAlias alias="mrArtistVO"      type="msi.dingastar.vo.MrArtistVO"/>
+		<typeAlias alias="mrSingSummaryVO" type="msi.dingastar.vo.MrSingSummaryVO"/>
+		<typeAlias alias="mrVO"            type="msi.dingastar.vo.MrVO"/>
+		<typeAlias alias="copyrightVO"     type="msi.dingastar.vo.CopyrightVO"/>
+		<typeAlias alias="mrRegCommentVO"  type="msi.dingastar.vo.MrRegCommentVO"/>
+		-->
+	</typeAliases>
+</configuration>

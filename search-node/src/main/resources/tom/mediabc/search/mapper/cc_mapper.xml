@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="cc">
+
+
+	<insert id="insertCContent">
+		INSERT INTO ccontent(
+			ccid, 
+			version,
+			owner_id,
+			owner_reg_date,
+			status,
+			reg_date
+		) VALUES (
+			#{ccid},
+			#{version},
+			#{ownerId},
+			#{ownerRegDate},
+			#{status},
+			now()
+		)
+	</insert>
+	
+	<update id="updateCcontent">
+		UPDATE ccontent
+		SET
+			owner_id       = #{ownerId},
+			owner_reg_date = #{ownerRegDate},
+			status         = #{status}
+		WHERE
+			ccid           = #{ccid}
+		AND version        = #{version}
+	</update>
+	
+	
+	<update id="updateMetadata">
+		UPDATE metadata
+		SET 
+			ccid              = #{ccid},
+			version           = #{version},
+			meta_path         = #{metaPath},
+			metadata_original = #{metadataOriginal},
+			metadata_service  = #{metadataService},
+			meta_type         = #{metaType},
+			meta_class        = #{metaClass},
+			title             = #{title},
+			content_type      = #{contentType},
+			last_modify       = #{lastModify}
+		WHERE
+			meta_seq          = #{metaSeq}
+	</update>
+	
+	
+	
+	
+	
+	<insert id="insertMetaFiles" useGeneratedKeys="true" keyProperty="metaFileSeq">
+		INSERT INTO metadata_file(
+			ccid, 
+			version, 
+			meta_path,
+			meta_type,
+			meta_size,
+			meta_class,
+			file_status
+		) VALUES (
+			#{ccid}, 
+			#{version}, 
+			#{metaPath},
+			#{metaType},
+			#{metaSize},
+			#{metaClass},
+			#{fileStatus}
+		)
+	</insert>
+	
+	
+	<update id="updateMetaFiles">
+		UPDATE metadata_file
+		SET 
+			ccid        = #{ccid}, 
+			version     = #{version}, 
+			meta_type   = #{metaType}, 
+			meta_size   = #{metaSize}, 
+			meta_class  = #{metaClass}, 
+			file_status = #{fileStatus}
+		WHERE
+			meta_path          = #{metaPath}
+	</update>
+	
+	
+	<insert id="insertContentFiles" useGeneratedKeys="true" keyProperty="contentFileSeq">
+		INSERT INTO ccontent_file(
+			ccid,
+			version,
+			content_path,
+			content_type,
+			content_size,
+			content_class
+		) VALUES (
+			#{ccid},
+			#{version},
+			#{contentPath}, 
+			#{contentType}, 
+			#{contentSize},
+			#{contentClass}
+		)
+	</insert>
+	
+	
+	<insert id="insertMetaData" useGeneratedKeys="true" keyProperty="metaSeq">
+		INSERT INTO metadata(
+			ccid,
+			version,
+			meta_path,
+			metadata_original,
+			metadata_service,
+			meta_type,
+			meta_class,
+			title,
+			content_type,
+			last_modify
+		) VALUES (
+			#{ccid},
+			#{version},
+			#{metaPath},
+			#{metadataOriginal},
+			#{metadataService},
+			#{metaType},
+			#{metaClass},
+			#{title},
+			#{contentType},
+			#{lastModify}
+		)
+	</insert>
+	
+	
+	
+	<insert id="insertMetadataHist" useGeneratedKeys="true" keyProperty="metaHistId">
+		INSERT INTO metadata_hist(
+			meta_seq,
+			metadata,
+			update_date
+		) VALUES (
+			#{metaSeq},
+			#{metadata},
+			#{updateDate}
+		)
+	</insert>
+	
+	
+	
+	
+	<delete id="deleteCC" >
+		DELETE FROM metadata_file WHERE ccid = #{ccid} and version = #{version};
+		DELETE FROM ccontent_file WHERE ccid = #{ccid} and version = #{version};
+		DELETE FROM metadata      WHERE ccid = #{ccid} and version = #{version};
+		DELETE FROM ccontent      WHERE ccid = #{ccid} and version = #{version};
+	</delete>
+	
+	
+	<select id="selectMetadataByCcidVer" resultType="tom.mediabc.search.vo.dao.MetadataVO">
+		SELECT *
+		FROM   metadata
+		WHERE  ccid    = #{ccid}
+		AND    version = #{version}
+	</select>
+	
+	<select id="selectMetadataByMetaSeq" resultType="tom.mediabc.search.vo.dao.MetadataVO">
+		SELECT *
+		FROM   metadata
+		WHERE  meta_seq    = #{metaSeq}
+	</select>
+	
+	
+	
+	<select id="selectContentFilesByCCidVersion" resultType="tom.mediabc.search.vo.dao.CContentFileVO">
+		SELECT *
+		FROM   ccontent_file
+		WHERE  ccid    = #{ccid}
+		AND    version = #{version}
+	</select>
+	
+	
+	<select id="selectCcontentCCidByCCidVersion" resultType="tom.mediabc.search.vo.dao.CContentVO">
+		SELECT *
+		FROM   ccontent
+		WHERE  ccid    = #{ccid}
+		AND    version = #{version}
+	</select>
+	
+	<select id="selectMetaFileByCCidVersionPath" resultType="tom.mediabc.search.vo.dao.MetadataFileVO">
+		SELECT *
+		FROM   metadata_file
+		WHERE  ccid      = #{ccid}
+		AND    version   = #{version}
+		AND    meta_path = #{path}
+	</select>
+	
+	<select id="selectMetaFileByCCidVersion" resultType="tom.mediabc.search.vo.dao.MetadataFileVO">
+		SELECT *
+		FROM   metadata_file
+		WHERE  ccid      = #{ccid}
+		AND    version   = #{version}
+	</select>
+	
+	
+	<select id="selectAllVersionByCcid" resultType="java.lang.String">
+		SELECT distinct(version)
+		FROM metadata
+		WHERE ccid = #{ccid}
+	</select>
+	
+	
+	
+</mapper>

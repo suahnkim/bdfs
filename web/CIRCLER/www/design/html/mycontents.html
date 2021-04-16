@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<?php include "../inc/top.html"; ?> 
+</head>
+<body>
+
+<?php include "../inc/header.html"; ?>
+<div id="wrap">
+	<?php include "../inc/leftmenu.html"; ?>
+	<div class="contents">
+		<p class="mytit"><img src="../img/mycontents_tit.png" alt=""> 내가 받은 컨텐츠</p>
+		<div class="table_wrap">
+			<div class="btnbox">
+				<button class="btn_whitebox">선택 삭제<img src="../img/ic_x.png" alt=""></button><button class="btn_violetbox">다시 받기<img src="../img/ic_download.png" alt=""></button>
+			</div>
+			<table class="sty01 line2">
+				<colgroup><col width="10%"><col width="*"><col width="15%"><col width="12%"><col width="12%"></colgroup>
+				<tr>
+				   <th><form><input type="checkbox" name=""/></form></th><th>제목</th><th>용량</th><th>가격</th><th>잔여일</th>
+				</tr>
+				<tr class="noticeline">
+				<td><img src="../img/ic_notice.png" alt=""></td><td colspan="4" class="align_left">다운로드한 콘텐츠는 3일간 무료로 다시받기가 가능합니다</td>
+			    </tr>
+			    <tr>
+				<td><form><input type="checkbox" name=""/></form></td><td class="align_left"><a href="#">고양이 샤워시키기</a></td><td>1.6GB</td><td>30 WAY</td><td>3일</td>
+			    </tr>				
+				<tr>
+				<td><form><input type="checkbox" name=""/></form></td><td class="align_left"><a href="#">1페이지당 20줄이 나오면 됩니다 1페이지당 20줄이 나오면 됩니다 1페이지당 20줄이 나오면 됩니다1페이지당 20줄이 나오면 됩니다</a></td><td>1.6GB</td><td>30 WAY</td><td>3일</td>
+			    </tr>
+			</table>
+			<ul class="pagenum">
+				<li class="arr"><i class="fas fa-angle-double-left"></i></li>
+				<li class="arr"><i class="fas fa-angle-left"></i></li>
+				<li class="on"><a href="">1</a></li>
+				<li><a href="">2</a></li>
+				<li><a href="">3</a></li>
+				<li><a href="">4</a></li>
+				<li><a href="">5</a></li>
+				<li class="arr"><i class="fas fa-angle-double-right"></i></li>
+				<li class="arr"><i class="fas fa-angle-right"></i></li>
+			</ul>
+			<div class="board_search">
+				Search <input type="text" name="" class="textbox"/><button class="btn_bseach">검색</button>
+			</div>
+		</div>
+	</div>
+	<?php include "../inc/footer.html"; ?>
+</div>
+
+</body>
+</html>

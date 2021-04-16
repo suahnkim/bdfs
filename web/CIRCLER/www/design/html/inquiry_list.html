@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<?php include "../inc/top.html"; ?> 
+</head>
+<body>
+<?php include "../inc/header.html"; ?>
+<div id="wrap">
+	<?php include "../inc/leftmenu.html"; ?>
+	<div class="contents">
+		<p class="mytit"><img src="../img/customer_tit.png" alt=""> 고객센터</p>
+		<div class="table_wrap">
+			<ul class="cutomer_tab">
+			<li onclick="location.href='notice.html' ">공지사항</li>
+			<li  onclick="location.href='inquiry.html' ">1:1 문의</li>
+			<li class="on">내 문의 내역</li>
+			</ul>
+			<ul class="acco_tit">
+				<li class="acco_inqdate">작성일</li><li class="acco_inqtit" style="text-align:center">제목</li><li class="acco_inqstate">상태</li><li class="acco_arrow"></li>
+			</ul>
+			<ul id="example2" class="accordion">
+                <li>
+                    <h3>
+					<div class="acco_inqdate">2019-10-15</div><div class="acco_inqtit">다운로드 되지 않습니다</div><div class="acco_inqstate"><span class="statehold">대기중</span></div><div class="acco_arrow"><img src="../img/icon_arrow_down.png" alt=""></div>
+					</h3>                   
+                </li>
+				<li>
+                    <h3>
+					<div class="acco_inqdate">2019-09-20</div><div class="acco_inqtit">내 문의 내역 타이틀타이틀</div><div class="acco_inqstate"><span class="stateanswer">답변완료</span></div><div class="acco_arrow"><img src="../img/icon_arrow_down.png" alt=""></div>
+					</h3>
+                    <div class="panel loading">
+                        <ul class="inquiry_answer inquiry_line">
+                        <li class="usetxt">Q</li><li>인기 콘텐츠라는 것이 있던데 선정 기준이 몬가요?</li>
+                        </ul>
+						<ul class="inquiry_answer">
+                        <li class="savetxt">A</li><li>안녕하세요. Circler 고객센터입니다. <br/>문의하신 인기 콘텐츠는 Circler 회원님께서 가장 많이 구매한 순서입니다. <br/>감사합니다.</li>
+                        </ul>
+						<div class="acco_btnbox">
+							<button class="btn_graybox">X 닫기</button>
+						</div>
+                    </div>
+                </li>   
+            </ul>
+		</div>
+	</div>
+	<?php include "../inc/footer.html"; ?>
+</div>
+</body>
+</html>
+ <script type="text/javascript" src="../js/jquery-1.4.2.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../js/jquery.accordion.2.0.js" charset="utf-8"></script>
+<script type="text/javascript">
+            $('#example1, #example3').accordion();
+            $('#example2').accordion({
+                canToggle: true
+            });
+            $('#example4').accordion({
+                canToggle: true,
+                canOpenMultiple: true
+            });
+            $(".loading").removeClass("loading");
+        </script>

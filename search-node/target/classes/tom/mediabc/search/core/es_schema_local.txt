@@ -1,0 +1,105 @@
+curl -H 'Content-Type: application/json' -XDELETE 'http://localhost:9200/ccontents_service'
+curl -H 'Content-Type: application/json' -XDELETE 'http://localhost:9200/ccontents_original'
+
+
+curl -H 'Content-Type: application/json' -XPUT 'http://localhost:9200/ccontents_service' -d '
+{
+"settings": {
+  "index": {
+    "analysis": {
+      "normalizer": {
+        "my_normalizer": {
+          "type": "custom",
+          "char_filter": [],
+          "filter": ["lowercase", "asciifolding"]
+        }
+      }
+    }
+  }
+},
+  "mappings" : {
+      "properties" : {
+      	  "ccid" :                    { "type" : "keyword" },
+          "version" :                 { "type" : "keyword" },
+          "status" :                  { "type" : "keyword" },
+          "owner_id" :                { "type" : "keyword" },
+          "owner_reg_date" :          { "type" : "date", "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"},
+          "meta_container" : {
+          	"properties" : {
+				  "meta_seq" :                { "type" : "long" },
+		          "content-type" :            { "type" : "keyword"},
+          		  "meta-type" :               { "type" : "keyword"},
+          		  "meta_class" :              { "type" : "keyword"},
+          		  "target" :                  { "type" : "keyword"},
+          		  "last_modify" :             { "type" : "date", "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"},
+          		  "metadata" : {
+          		  	  "properties" : {
+	          		  	  "vender_id" :               { "type" : "keyword" },
+				          "theatrical_release_date" : { "type" : "keyword" },
+				          "rating" :                  { "type" : "keyword" },
+						  "country" :                 { "type" : "keyword", "normalizer": "my_normalizer"},
+				          "original_spoken_locale" :  { "type" : "keyword", "normalizer": "my_normalizer"},
+						  "genre" :                   { "type" : "keyword", "normalizer": "my_normalizer"},
+						  
+				          "production_company" :      { "type" : "text", "analyzer": "nori"},
+				          "copyright_cline" :         { "type" : "text", "analyzer": "nori"},
+				          "title" :                   {
+				          		"type" : "text", 
+				          		"fielddata" : true,
+				          		"fields": {
+						            "korean_field": {
+						              "analyzer": "nori",
+						              "type": "text"
+						            },
+						            "english_field": {
+						              "analyzer": "english",
+						              "type": "text"
+						            }
+				        		}
+				          },
+				          "synopsis" :                { 
+				        		"type" : "text",
+				        		"fields": {
+						            "korean_field": {
+						              "analyzer": "nori",
+						              "type": "text"
+						            },
+						            "english_field": {
+						              "analyzer": "english",
+						              "type": "text"
+						            }
+				        		}
+				          },
+				
+				          "cast" : {
+				        	"properties" : {
+				        		"artist_id" :         { "type" : "keyword" },
+				        		"name" :              { "type" : "text", "analyzer": "nori"},
+				        		"cast_name" :         { "type" : "text", "analyzer": "nori"}
+				        	}
+				          },
+				          "crew" : {
+				        	"properties" : {
+				        		"artist_id" :         { "type" : "keyword" },
+				        		"name" :              { "type" : "text", "analyzer": "nori"},
+				        		"role" :              { "type" : "text", "analyzer": "nori"}
+				        	}
+				          },
+				          "artwork" : {
+				        	"properties" : {
+				        		"title" :                  { "type" : "keyword" },
+				        		"file_name" :              { "type" : "keyword"},
+				        		"file_size" :              { "type" : "long"},
+				        		"rep" :                    { "type" : "keyword"},
+				        		"height" :                 { "type" : "long"},
+				        		"width" :                  { "type" : "long"},
+				        		"format" :                 { "type" : "keyword"}
+				        	}
+				          }
+          		  	  }
+          		  }
+          	}
+          }
+      }
+  }
+}'

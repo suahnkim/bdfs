@@ -1,0 +1,7 @@
+/* Add here all your CSS customizations */
+
+.card-header {padding:10px !important;}
+.card-body {padding:20px 30px !important;}
+.card-body.contentSellFom {max-height:750px; overflow-x:hidden; overflow-y:scroll;}
+
+.form-bordered .form-group {margin-bottom:10px !important; padding-bottom:10px !important;}

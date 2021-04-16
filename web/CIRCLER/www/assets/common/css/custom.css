@@ -1,0 +1,6 @@
+/* Add here all your CSS customizations */
+
+.layer_contents_pop {position:fixed !important; top:50px !important; max-height:800px !important; overflow-y:scroll !important;}
+.popup_close_btn {top:50px !important;}
+
+.conPop .contop .btnbox {position:relative !important; left:0 !important; width:100% !important;}

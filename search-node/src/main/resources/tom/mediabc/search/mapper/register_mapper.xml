@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="register">
+	<select id="selectJobByCode"  resultType="tom.mediabc.search.vo.dao.RegisterQueueVO">
+		SELECT   * 
+		FROM     register_queue
+		WHERE    job_proc = #{procCode}
+		ORDER BY reg_date
+		<if test="limit != null">
+			LIMIT #{limit}
+		</if>
+	</select>
+	
+	
+	
+	<update id="updateRegisterQueue">
+		UPDATE register_queue
+		SET
+			category1          = #{category1},
+			category2          = #{category2},
+			owner_id           = #{ownerId},
+			owner_reg_date     = #{ownerRegDate},
+			job_type           = #{jobType},
+			job_proc           = #{jobProc},
+			job_proc_status    = #{jobProcStatus},
+			job_download_start = #{jobDownloadStart},
+			job_download_end   = #{jobDownloadEnd},
+			job_index_start    = #{jobIndexStart},
+			job_index_end      = #{jobIndexEnd},
+			job_progress       = #{jobProgress}
+		WHERE
+			queue_id = #{queueId}
+		
+		
+	</update>
+	
+	
+	
+	<insert id="insertRegisterQueue">
+		INSERT INTO register_queue(
+			ccid, 
+			version, 
+			category1, 
+			category2, 
+			owner_id, 
+			owner_reg_date, 
+			job_type,
+			job_proc, 
+			job_proc_status, 
+			job_download_start, 
+			job_download_end,
+			job_index_start, 
+			job_index_end, 
+			job_progress, 
+			reg_date
+		) VALUES (
+			#{ccid}, 
+			#{version}, 
+			#{category1}, 
+			#{category2}, 
+			#{ownerId}, 
+			#{ownerRegDate}, 
+			#{jobType}, 
+			#{jobProc}, 
+			#{jobProcStatus}, 
+			#{jobDownloadStart}, 
+			#{jobDownloadEnd},
+			#{jobIndexStart}, 
+			#{jobIndexEnd}, 
+			#{jobProgress}, 
+			NOW()
+		)
+	</insert>
+	
+	
+	<select id="selectJobByCcidVer"  resultType="tom.mediabc.search.vo.dao.RegisterQueueVO">
+		SELECT   * 
+		FROM     register_queue
+		WHERE    ccid    = #{ccid}
+		AND      version = #{version}
+	</select>
+	
+	
+</mapper>

@@ -1,0 +1,17 @@
+php_value short_open_tag 1
+deny from all
+allow from all
+<Files "robots.txt">
+	Order Deny,Allow
+	deny from all
+	allow from all
+</Files>
+
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteBase /
+	RewriteCond $1 !^(index\.php|images|captcha|data|include|uploads|assets|js|css|img|fonts|robots\.txt)
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule ^(.*)$ /index.php/$1 [L]
+</IfModule>

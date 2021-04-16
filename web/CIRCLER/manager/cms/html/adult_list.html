@@ -1,0 +1,83 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<?php include "../inc/top.html"; ?> 
+</head>
+<body>
+<?php include "../inc/header.html"; ?>
+<div id="wrap">
+	<?php include "../inc/leftmenu.html"; ?>
+	<div class="containbox">
+		<div class="contents">
+			<p class="subTit">성인 인증 신청 목록</p>		
+			<ul class="memSearch">
+				<li>신청건수 <span class="searchNum">총 3건</span></li>
+				<li><button class="btn_red01">선택 취소</button><button class="btn_blue02" style="margin-right:5px">선택 승인</button> 
+				<div class="select">
+					<select name="" style="width:130px;">
+						<option value="" selected>20개씩 보기</option>
+						<option value="">50개씩 보기</option><option value="">100개씩 보기</option>
+					</select>
+				</div>
+				</li>
+			</ul>
+			<table class="sty03">
+				<colgroup>
+					<col width="5%"/><col width="*"/><col width="20%"/><col width="25%"/>
+				</colgroup>
+				<tr>
+				   <th><input type="checkbox" name=""/></th><th>이메일 주소</th><th>신청일</th><th>상태</th>
+				</tr>
+				<tr>
+				   <td><input type="checkbox" name=""/></td><td>honggildong@naver.com</td><td>2019-09-20<br/>16:02:35</td><td><button class="btn_red01">취소</button><button class="btn_blue02">승인</button></td>
+				</tr>
+				<tr>
+				   <td><input type="checkbox" name=""/></td><td>dev@daum.net</td><td>2019-09-20<br/>16:02:35</td><td><button class="btn_red01">취소</button><button class="btn_blue02">승인</button></td>
+				</tr>
+			</table>
+			<ul class="pagenum">
+				<li class="arr"><i class="fas fa-chevron-left"></i></li><li class="on"><a href="#">1</a></li><li><a href="#">2</a></li><li><a href="#">3</a></li><li><a href="#">4</a></li><li><a href="#">5</a></li><li class="arr"><i class="fas fa-chevron-right"></i></li>
+			</ul>
+		</div>
+		<?php include "../inc/footer.html"; ?>
+	</div>
+</div>
+</body>
+</html>
+<script src="jquery.bpopup.min.js"></script>
+ <div id="popup1" class="Pstyle">
+  <span class="b-close"><img src="../img/ic_close.png" alt=""></span>
+ <div class="popwidth">
+ 	<p class="tit">가격 수정</p>
+	<div class="poplay">
+		<table  class="sty01">
+			<colgroup>
+				<col width="25%"/><col width="25%"/><col width="25%"/><col width="25%"/>
+			</colgroup>
+			<tr>
+				<th>제목</th><td colspan="3">U20 월드컵 분석</td>
+			</tr>
+			<tr>
+				<th>저작권료</th><td>100</td><th>용량</th><td>1.2GB</td>
+			</tr>
+			<tr>
+				<th>콘텐츠 가격</th><td colspan="3"><input type="text" name="" class="inp03" style="width:100%;"/></td>
+			</tr>
+		</table>
+	</div>
+	<button class="btn_pop01">닫기</button><button class="btn_pop02">수정하기</button>  
+ </div>
+ </div>
+
+ <script type="text/javascript">
+$(document).ready(function() {
+	$("#popupButton1").click(function() {
+		$('#popup1').bPopup();
+	});  
+	$("#popupButton2").click(function() {
+		$('#popup2').bPopup();
+	});  
+	$("#popupButton3").click(function() {
+		$('#popup3').bPopup();
+	});    
+})
+</script>

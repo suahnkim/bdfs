@@ -1,0 +1,80 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<?php include "../inc/top.html"; ?> 
+</head>
+<body>
+<?php include "../inc/header.html"; ?>
+<div id="wrap">
+	<?php include "../inc/leftmenu.html"; ?>
+	<div class="containbox">
+		<div class="contents">
+			<p class="subTit">회원 목록</p>
+			<table class="sty02">
+				<colgroup>
+					<col width="15%"/><col width="35%"/><col width="15%"/><col width="35%"/>
+				</colgroup>
+				<tr>
+				   <th>계정 생성일</th>
+				   <td colspan="3"><span class="alignment01"><input type="text" name="" placeholder="전체" class="inp01"/> ~ <input type="text" name="" placeholder="전체" class="inp01" /></span><span class="alignment02"><button class="btn_gray01">당일</button><button class="btn_gray01">1개월</button><button class="btn_gray01">3개월</button></span></td>
+				</tr>
+				<tr>
+				   <th>회원 상태</th>
+				   <td>
+					<div class="select">
+						<select name="" style="width:150px;">
+						<option value="" selected>전체</option>
+						<option value="">가입</option><option value="">탈퇴</option>
+					   </select>
+				   </div>
+				   </td>
+				   <th>이메일 주소</th>
+				   <td><input type="text" name="" placeholder="이메일 주소 입력"  class="inp02"/></td>
+				</tr>
+			</table>
+			<p class="btnbox"><button class="btn_blue01">검색</button></p>
+			<ul class="memSearch">
+				<li>검색건수 <span class="searchNum">총 3건</span></li>
+				<li><button class="btn_green01" onclick="window.open('member_search.html','window_name','width=900px,height=750px,location=no,status=no,scrollbars=auto');">회원별 상세 조회</button>
+				<div class="select">
+					<select name="" style="width:130px;">
+						<option value="" selected>20개씩 보기</option>
+						<option value="">50개씩 보기</option><option value="">100개씩 보기</option>
+					</select>
+				</div>
+				</li>
+			</ul>
+			<table class="sty03">
+				<colgroup>
+					<col width="15%"/><col width="40%"/><col width="30%"/><col width="15%"/>
+				</colgroup>
+				<tr>
+				   <th>계정 생성일</th><th>ETH 계정</th><th>이메일 주소</th><th>회원 상택</th>				  
+				</tr>
+				<tr>
+				   <td>2019-09-08<br/>12:02:01</td>
+				   <td>1ee77618b9e4f7651381e2ede71b0d389f27a5c6</td>
+				   <td>honggildong@naver.com</td>
+				   <td>가입</td>
+				</tr>
+				<tr>
+				   <td>2019-09-05<br/>17:38:47</td>
+				   <td>9bcecd9085fae8fa787ac3f3bd3c2f25a90e0610</td>
+				   <td>dev@daum.net</td>
+				   <td>가입</td>
+				</tr>
+				<tr>
+				   <td>2019-09-02<br/>22:32:23</td>
+				   <td>c7cf04aa9a7a6d548e6d1dac8f7401f4a36ad32b</td>
+				   <td>pnstory@gmail.com</td>
+				   <td class="red">탈퇴<br/>(2019-09-02 22:32:23)</td>
+				</tr>
+			</table>
+			<ul class="pagenum">
+				<li class="arr"><i class="fas fa-chevron-left"></i></li><li class="on"><a href="#">1</a></li><li><a href="#">2</a></li><li><a href="#">3</a></li><li><a href="#">4</a></li><li><a href="#">5</a></li><li class="arr"><i class="fas fa-chevron-right"></i></li>
+			</ul>
+		</div>
+		<?php include "../inc/footer.html"; ?>
+	</div>
+</div>
+</body>
+</html>

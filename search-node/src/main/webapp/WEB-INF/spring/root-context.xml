@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+		
+		
+		
+	
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName"	value="com.mysql.jdbc.Driver" />	
+		<property name="url"            	value="jdbc:mysql://host:3306/mediabc_search?characterEncoding=utf-8&amp;useUnicode=true&amp;zeroDateTimeBehavior=convertToNull&amp;allowMultiQueries=true" />
+		<property name="username"       	value="user" />
+		<property name="password"       	value="password" />
+		
+		<property name="defaultAutoCommit" 	value="true" />
+		<property name="maxActive" 			value="100" />
+		<property name="maxIdle" 			value="50" />
+		<property name="maxWait" 			value="30000" />
+		<property name="validationQuery" 	value="SELECT 1 FROM DUAL" />
+		<property name="connectionInitSqls" value="SET time_zone = '+09:00'"/>
+	</bean>
+	
+	
+	
+	
+		
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation"  value="classpath:tom/mediabc/search/mapper/mybatis-config.xml"></property>
+		<property name="mapperLocations" value="classpath*:tom/mediabc/search/mapper/*_mapper.xml"/>
+	</bean>
+	
+	
+	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactory" />
+	</bean>
+	
+	
+	<bean 
+		id="transactionManager" 
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize"   value="20000000000" />
+        <property name="maxInMemorySize" value="500000" />
+    </bean>
+</beans>

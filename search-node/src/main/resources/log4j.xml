@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration PUBLIC "-//APACHE//DTD LOG4J 1.2//EN" "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<!-- Appenders -->
+	<appender name="console" class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p: [%c] - %m%n" />
+		</layout>
+	</appender>
+	
+	<appender name="svc" class="org.apache.log4j.DailyRollingFileAppender">
+		<errorHandler class="org.apache.log4j.helpers.OnlyOnceErrorHandler" />
+		<param name="File" value="${catalina.home}/logs/mediabc/search.log" />
+		<param name="Threshold" value="DEBUG" />
+		<param name="Append" value="true" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p [%c] %m%n" />
+		</layout>
+	</appender>
+	
+	<appender name="download_batch" class="org.apache.log4j.DailyRollingFileAppender">
+		<errorHandler class="org.apache.log4j.helpers.OnlyOnceErrorHandler" />
+		<param name="File" value="${catalina.home}/logs/mediabc/download_batch.log" />
+		<param name="Threshold" value="DEBUG" />
+		<param name="Append" value="true" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p [%c] %m%n" />
+		</layout>
+	</appender>
+	
+	
+	<appender name="index_batch" class="org.apache.log4j.DailyRollingFileAppender">
+		<errorHandler class="org.apache.log4j.helpers.OnlyOnceErrorHandler" />
+		<param name="File" value="${catalina.home}/logs/mediabc/index_batch.log" />
+		<param name="Threshold" value="DEBUG" />
+		<param name="Append" value="true" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p [%c] %m%n" />
+		</layout>
+	</appender>
+	
+	
+	
+	<!-- Application Loggers -->
+	<logger name="tom.mediabc.search">
+		<level value="debug" />
+		<!-- <appender-ref ref="console" /> -->
+		<appender-ref ref="console" />
+		<appender-ref ref="svc" />
+	</logger>
+	
+	<logger name="tom.mediabc.download">
+		<level value="debug" />
+		<!-- <appender-ref ref="console" /> -->
+		<appender-ref ref="console" />
+		<appender-ref ref="download_batch" />
+	</logger>
+	
+	<logger name="tom.mediabc.index">
+		<level value="debug" />
+		<!-- <appender-ref ref="console" /> -->
+		<appender-ref ref="console" />
+		<appender-ref ref="index_batch" />
+	</logger>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- 3rdparty Loggers -->
+	<logger name="org.springframework.core">
+		<level value="info" />
+		<appender-ref ref="console" />
+		<appender-ref ref="svc" />
+	</logger>
+	
+	<logger name="org.springframework.beans">
+		<level value="info" />
+		<appender-ref ref="console" />
+		<appender-ref ref="svc" />
+	</logger>
+	
+	<logger name="org.springframework.context">
+		<level value="info" />
+		<appender-ref ref="console" />
+		<appender-ref ref="svc" />
+	</logger>
+
+	<logger name="org.springframework.web">
+		<level value="info" />
+		<appender-ref ref="console" />
+		<appender-ref ref="svc" />
+	</logger>
+
+
+
+	<!-- Root Logger -->
+	<root>
+		<!-- 
+		<priority value="warn" />
+		<appender-ref ref="console" />
+		-->
+	</root>
+	
+</log4j:configuration>

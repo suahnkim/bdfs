@@ -1,0 +1,227 @@
+@charset "utf-8";
+
+@import url("default.css");
+
+/* common */
+
+#wrap {width:100%; overflow:hidden;  background:#fff}
+.header {width: 100%; height: 60px;display: flex; align-items: center;align-content: center;z-index: 30;position: fixed; background: #fff; border-bottom:1px solid rgba(0, 0, 0, 0.05); box-shadow: 0 3px 10px rgba(0,0,0,0.2); min-width:1000px; overflow:hidden;}
+
+.topbox { width:100%; position:relative; overflow:hidden;}
+
+.logo{ width:300px; margin:5px 0 0 0; padding-left:27px; float:left;}
+.Myinfo{ position:absolute;  right:20px; min-width:400px; z-index:20;color:#555; text-align:right; }
+.Myinfo li{display:inline-block;margin-left:5px; font-size:14px;}
+.Myinfo li .myname {display: inherit;  height:31px; background:url(../img/icon_mem.png) 0 0 no-repeat; border:0;  text-align:left; padding:5px 30px 0 40px}
+.Myinfo li .btn_logout { display: inherit; height:30px; border:1px solid #dfdfdf; padding:0 15px; background:#fff; border:1px solid #dfdfdf;}
+
+
+#snb  {width:280px; height:100%; position:fixed; top:60px; left:0;z-index:5;overflow:hidden; background:url(../img/snb_bg.png) repeat-y; }
+
+.tab {  float: left; width: 90px; }
+.tab button {  display: block; width: 100%; height:130px; background:url(../img/bomline.png) no-repeat bottom; border: none;  outline: none;  text-align: left;  cursor: pointer;  transition: 0.3s;  font-size: 14px; color:#fff; font-weight:600; line-height:140%; text-align:center; vertical-align:middle}
+.tab button img {margin-bottom:10px;}
+.tab button:hover {}
+.tab button.active { background:url(../img/leftmenu_dep1_bg.png) repeat-y; }
+.tabcontent {  float: left; width: 190px; }
+.tabcontent li {height:65px;  background:url(../img/sub_bomline.png) no-repeat bottom;}
+.tabcontent li span.submenu {display:inline-block; width:100%; margin:19px 0 0 27px; padding:0 0 0 15px; background:url(../img/icon_submenu.png) no-repeat 0 7px;}
+.tabcontent li span.submenu_on { display:inline-block; width:100%; margin:19px 0 0 27px; padding:0 0 0 15px; background-image:url(../img/icon_submenu_on.png),  url(../img/submenubg_on.png); background-repeat:no-repeat,no-repeat; background-position:0 7px, 154px 3px;}
+.tabcontent li span.submenu a {color:#fff; font-size:14px;}
+.tabcontent li span.submenu_on a {color:#fff; font-size:14px; text-decoration:underline}
+
+.snbmap02 {padding-top:130px}
+.snbmap03 {padding-top:260px}
+.snbmap04 {padding-top:390px}
+.snbmap05 {padding-top:520px}
+
+.footer{width:100%; height:120px; padding:20px 0;font-size:12px; color:#666; text-align:center; clear:both; }
+
+.containbox { background-color: #f2f2f3;  margin:60px 0 0 280px;  padding:30px 60px; overflow:visible;}
+.containbox	.contents {width:100%; overflow:visible; }
+
+
+/* main */
+.coininfo {width:100%; overflow:hidden;}
+.coininfo li {width:49%; height:60px; float:left; background:#fff; text-align:center; font-weight:400;vertical-align:middle; padding-top:15px; box-sizing: border-box}
+.coininfo li img {vertical-align:middle; margin-left:20px;}
+.coininfo li:nth-child(1) {margin-right:2%; border:1px solid #2faa5c;}
+.coininfo li:nth-child(2) {border:1px solid #774bb5;}
+
+.conbox {border:1px solid #ccc; background:#fff; padding:40px; margin-top:20px; text-align:center}
+.conbox .tit {display:inline-block; margin:0  0 30px 0; font-size:30px; font-weight:500; letter-spacing:-2px; border-bottom:1px solid #000;}
+.conbox .graphbox {width:100%; overflow:hidden; text-align:left}
+.conbox .graphbox li.graph01 {width:38%; float:left; margin-right:2%;}
+.conbox .graphbox li.graph02 {width:20%; float:left;}
+.conbox .graphbox li.graph03 {width:49%; float:left; margin-right:2%;}
+.conbox .graphbox li.graph04 {width:49%; float:left; }
+.conbox .graphbox li .graph_tit {background:#fff; padding:0 0 10px 25px; font-size:17px; background:url(../img/icon_tit.png) no-repeat 0 5px}
+
+.graphcon {width:100%; min-height:258px; overflow:hidden; background:#f8f8f8}
+
+table.sty01 {width:100%;border-top:1px solid #cfcfcf; border-left:1px solid #cfcfcf; background:#fff; font-size:14px;}
+table.sty01 th {border-bottom:1px solid #cfcfcf; background:#f8f8f8; border-right:1px solid #cfcfcf;  padding:5px 0; font-weight:400}
+table.sty01 td {padding:5px; border-bottom:1px solid #cfcfcf; border-right:1px solid #cfcfcf; vertical-align:middle; }
+table.sty01 td.c {text-align:center}
+
+/* sub */
+table.sty02 {width:100%;border-top:2px solid #707070; border-left:1px solid #cfcfcf; background:#fff; font-size:16px;}
+table.sty02 th {border-bottom:1px solid #cfcfcf; background:#fff; border-right:1px solid #cfcfcf;  padding:10px; font-weight:400}
+table.sty02 td {padding:10px; border-bottom:1px solid #cfcfcf; border-right:1px solid #cfcfcf; vertical-align:middle}
+
+table.sty03 {width:100%;border-top:2px solid #1567b4; border-left:1px solid #cfcfcf; background:#fff; font-size:16px; }
+table.sty03 th {height:70px; border-bottom:1px solid #cfcfcf; background:#e5ecf5; border-right:1px solid #cfcfcf;font-weight:400}
+table.sty03 td {padding:15px; border-bottom:1px solid #cfcfcf; border-right:1px solid #cfcfcf; vertical-align:middle; text-align:center; color:#5a5a5a}
+table.sty03 td a {color:#5a5a5a; }
+table.sty03 td a:hover {color:#1567b4}
+table.sty03 td.left {text-align:left;}
+table.sty03 td.red {color:red}
+
+table.sty04 {width:100%;border:1px solid #2faa5c; background:#fff; font-size:16px;}
+table.sty04 th {height:70px;background:#e4f1e9; border-right:1px solid #cfcfcf;font-weight:400}
+table.sty04 td {padding:10px; border-right:1px solid #cfcfcf; vertical-align:middle; text-align:center; color:#5a5a5a}
+table.sty04 td:last-child {border:0;}
+table.sty04 td.red {color:red}
+
+.pagenum {width:100%; margin:30px 0 ; text-align:center; overflow:hidden; font-size:14px; line-height:200%}
+.pagenum li {display:inline-block; width:30px; height:30px; border:1px solid #cfcfcf; background:#fff; color:#666; cursor:pointer ; margin:0 2px}
+.pagenum li a {color:#444}
+.pagenum li:hover {background:#ebeff0;}
+.pagenum li.arr {padding-top:8px; color:#7a7a7a}
+.pagenum li.on {background:#ebeff0; color:#7d73ee; border:1px solid #7d73ee; }
+.pagenum li.on a {color:#564ccd; font-weight:bold}
+
+
+.viewtit {font-size:20px; font-weight:bold; color:#000; margin-bottom:20px;}
+.viewsbox {font-size:16px; float:left;  color:#666; margin-right:20px}
+.viewline {width:30px; height:20px; float:left; padding-top:4px;}
+.viewline::after {content:"|"; font-size:10px; color:#ccc;}
+.btnbox_right {height:42px; overflow:hidden;text-align:right; margin-bottom:10px; vertical-align:top; }
+
+.listarrow {width:70px; height:40px;border:1px solid #cfcfcf; background:#fff; line-height:80%; vertical-align:middle;font-size:20px; margin-right:5px}
+
+
+.qna_left {width:80px; font-size:40px; float:left; vertical-align:top; padding:20px 0 0 20px; line-height:40px; }
+.qna_right {float:left;vertical-align:top; padding:20px; overflow:hidden;}
+.abg {border-top:1px solid red;}
+
+
+
+
+.subTit {margin:0  0 30px 0; font-size:30px; font-weight:500; letter-spacing:-2px;}
+
+/* input */
+.inp01 {width:150px; height:34px; border:1px solid #cfcfcf; text-align:center; vertical-align:middle; line-height:100%;  background:url('../img/ic_calendar.png') no-repeat 8px 5px;}
+.inp02 {width:100%; height:50px; border:1px solid #cfcfcf; background:#fff; margin:-4px 10px 0 0}
+.inp03 {width:100%; height:36px; border:1px solid #cfcfcf; background:#fff; margin:0 10px 0 0}
+.inp04 {width:50px; height:36px;float:left; border:1px solid #cfcfcf; background:#fff; }
+
+.soltarrow {width:30px; height:36px; float:left;; overflow:hidden; border:1px solid #cfcfcf; border-left:none;}
+.soltarrow li {width:100%; height:17px; background:#fff; text-align:center; font-size:15px; line-height:100%; cursor:pointer}
+.soltarrow li:first-child {border-bottom:1px solid #cfcfcf; padding-top:4px;}
+
+/* button */
+.btn_gray01 {width:80px; height:34px; background:#8991a3; color:#fff; border:1px solid #727b90; margin-right:5px; transition:0.3s}
+.btn_gray01:hover {background:#727b90}
+.btn_blue01 {width:120px; height:50px; background:#1567b4; color:#fff; border:0;  font-size:18px;transition:0.3s}
+.btn_blue01:hover {background:#104f8b}
+.btn_blue02 {height:34px; border:1px solid #1567b4; color:#1567b4;  background:#fff; transition:0.3s; padding:0 20px}
+.btn_blue02:hover {background:#1567b4; color:#fff}
+.btn_blue03 {width:120px; height:50px; background:#fff; color:#1567b4; border:1px solid #1567b4;  font-size:18px;transition:0.3s; }
+.btn_blue03:hover {background:#f3f3f3; }
+.btn_green01 {width:140px; height:34px; background:#2faa5c; border:1px solid #2faa5c; color:#fff; border:0;  transition:0.3s; margin-right:10px}
+.btn_green01:hover {background:#237c44}
+.btn_green02 {width:120px; height:50px;  background:#2faa5c;  color:#fff; border:0;font-size:18px; transition:0.3s; margin-left:10px}
+.btn_green02:hover {background:#237c44}
+.btn_red01 {height:34px; background:#fff; border:1px solid #d9000f; color:red; transition:0.3s; margin-right:10px; padding:0 20px;}
+.btn_red01:hover {background:#d9000f; color:#fff}
+.btn_white {width:80px; height:40px; border:1px solid #cfcfcf; background:#fff; vertical-align:top}
+.btn_white:hover {background:#333; color:#fff}
+
+.btnbox {width:100%; padding:20px 0 50px 0; text-align:center; overflow:hidden;}
+
+/* 회원목록 */
+.alignment01 {display:inline-block; margin-right:15px; vertical-align:middle}
+.alignment02 {display:inline-block; vertical-align:middle}
+
+.memSearch {width:100%; overflow:hidden; margin-bottom:10px;}
+.memSearch li:nth-child(1) {width:40%; height:40px;  float:left;}
+.memSearch span.searchNum {color:#1567b4}
+.memSearch li:nth-child(2) {width:60%; height:40px;  float:left; text-align:right}
+
+/* 회원별 상세 조회 */
+.mem_search {width:900px; overflow:hidden;}
+.mem_search .emailSearch {width:100%; border-bottom:1px solid #cfcfcf; padding:20px 0; text-align:center}
+
+.memsrcBox {padding:30px; overflow:hidden;}
+.memline {height:10px; background:#f2f2f3; border-top:1px solid #cfcfcf; border-bottom:1px solid #cfcfcf;}
+.txt_red {color:#f7004c}
+.txt_blue {color:#1653af}
+.txt_black {color:#000; font-weight:bold}
+.txt_black02 {font-size:14px; color:#246cca; margin-top:10px;}
+.memsrcTit {width:100%; padding-bottom:10px}
+.srcDetail {width:100%; text-align:center}
+.usage {background:#f8f8f8; padding:10px; text-align:center; margin:10px 0}
+
+
+.board_search  {text-align:center; overflow:hidden; border:1px solid #cfcfcf; padding:20px;background:#f8f8f8; border:1px solid #fff; margin-right:30px;}
+.board_search  input.textbox {width:300px; height:30px; background:#fff; border:1px solid #cfcfcf; margin:0 5px; padding:0 0 0 10px}
+.board_search  button.btn_bseach {width:70px; height:30px; border-radius:5px; background:#fff; border:1px solid #cfcfcf;}
+
+
+/* 셀렉트박스 */
+.select { z-index:0;display:inline;vertical-align:top !important;}
+.select select {height: 34px; vertical-align: -webkit-baseline-middle; border: 1px #c5c5c5 solid;  padding-left: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background:#fff url('../img/spr_select.png') no-repeat right center;
+    z-index:1;
+}
+select::-ms-expand {
+    display: none;
+}
+div:before {
+    display:block;
+    position:absolute;
+    content:'';
+    right:0px;
+    top:0px;
+    margin:2px;
+    z-index:5;
+}
+
+
+/* 레이어팝업 */
+.Pstyle { opacity: 0; display: none; position: relative; width: auto; background-color: #fff; margin: 15% auto; }
+.b-close { position: absolute; right: -45px; top: -45px; z-index:10;padding: 5px; display: inline-block; cursor: pointer;}
+.popwidth {width:500px; overflow:hidden;}
+.popwidth .tit {padding:10px 20px; background:#2d3e4f; color:#fff; }
+.popwidth .poplay {padding:20px; }
+.btn_pop01 {width:50%; height:70px; background:#8991a3; border:0; color:#fff; font-size:18px;}
+.btn_pop02 {width:50%; height:70px; background:#1653af; border:0; color:#fff; font-size:18px; }
+
+
+/* 로그인 */
+.logincon {display:table; width:100%; height:100%;overflow:hidden;background-color:#f8f8f8;  background-image:url('../img/login_bg01.png'), url('../img/login_bg02.png'), url('../img/login_bg03.png'); background-position:left bottom, right top, right bottom; background-repeat: no-repeat;}
+.logincon .loginbox {display:table-cell;text-align:center; vertical-align:middle}
+.logincon .loginbox .loginlay {display:inline-block; vertical-align:top;width:400px; height:300px; }
+.logincon .loginbox .loginlay .logoimg {text-align:center;}
+.logincon .loginbox .loginlay .logotxt {text-align:center; font-size:11px; margin-bottom:30px; font-size:16px; color:#000 }
+.logincon .loginbox .loginlay .logininp_pw {width:100%; height:65px; border:1px solid #c5c5c5; padding-left:15px;}
+.logincon .loginbox .loginlay button.btn_login {width:100%; height:80px; background:#1567b4; font-size:20px; color:#fff; border:0; margin-top:20px; font-weight:bold; letter-spacing:-2px;}
+
+.float_right {float:right;}
+
+
+
+
+.soltarrow {width:30px; height:36px; float:left;; overflow:hidden; border:1px solid #cfcfcf; border-left:none;}
+.soltarrow li {width:100%; height:17px; background:#fff; text-align:center; font-size:15px; line-height:100%; cursor:pointer}
+.soltarrow li:first-child {border-bottom:1px solid #cfcfcf; padding-top:4px;}
+
+#loading_ajax {width: 100%;height: 100%;background-color: rgba(0,0,0,0.7);position: fixed;z-index: 9999;top:0px;display:none;}
+#loading_ajax .img {width: 30px;height: 25px;padding-top: 2px;background-color: #FFFFFF;border-radius: 0.3em;border: 1px solid #EAEAEA;position: absolute;z-index: 135;top: 50%;left: 50%;text-align: center;vertical-align: middle;}
+
+
+

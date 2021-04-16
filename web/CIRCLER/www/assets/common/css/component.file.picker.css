@@ -1,0 +1,80 @@
+/*
+Browser Support
+
+This method was tested and works great in all modern browsers. There is a small bug in Firefox, where the file input can't be selected with a keyboard, but the file selection works fine.
+Internet Explorer   9+
+Chrome  yes
+Opera   yes
+Firefox   yes
+no support for keyboard focus
+Safari  yes
+iOS   6+
+Chrome Android  yes
+ */
+/* ===================== FILE INPUT ===================== */
+.jca-filepicker .jca-filepicker-area * {
+  box-sizing: border-box;
+}
+.jca-filepicker .jca-filepicker-area {
+  width: 100%;
+  position: relative;
+}
+.jca-filepicker .jca-filepicker-area input[type=file] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.jca-filepicker .jca-filepicker-area .file-dummy {
+  width: 100%;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px dashed rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: background 0.3s ease-in-out;
+}
+.jca-filepicker .jca-filepicker-area .file-dummy .success {
+  display: none;
+}
+.jca-filepicker .jca-filepicker-area:hover .file-dummy {
+  background: rgba(0, 0, 0, 0.1);
+}
+.jca-filepicker .jca-filepicker-area input[type=file]:focus + .file-dummy {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline: -webkit-focus-ring-color auto 5px;
+}
+.jca-filepicker .jca-filepicker-area input[type=file][data-selected-file-count] + .file-dummy {
+  border-color: rgba(0, 255, 0, 0.4);
+  background-color: rgba(0, 255, 0, 0.3);
+}
+.jca-filepicker .jca-filepicker-area input[type=file][data-selected-file-count] + .file-dummy .success {
+  display: inline-block;
+}
+.jca-filepicker .jca-filepicker-area input[type=file][data-selected-file-count] + .file-dummy .default {
+  display: none;
+}
+.jca-filepicker .jca-filepicker-output li.image {
+  display: inline-block;
+}
+.jca-filepicker .jca-filepicker-output img {
+  max-height: 100px;
+}
+/*# sourceMappingURL=fileapi.css.map */
+/*# sourceMappingURL=fileapi.css.map */
+/*# sourceMappingURL=fileapi.css.map */
+/*# sourceMappingURL=fileapi.css.map */
+/*# sourceMappingURL=fileapi.css.map */
+/*# sourceMappingURL=fileapi.css.map */
+/*# sourceMappingURL=fileapi.css.map */
+/*# sourceMappingURL=fileapi.css.map */
+/*# sourceMappingURL=fileapi.css.map */
+/*# sourceMappingURL=fileapi.css.map */
+/*# sourceMappingURL=fileapi.css.map */
+/*# sourceMappingURL=fileapi.css.map */
+/*# sourceMappingURL=fileapi.css.map */
+/*# sourceMappingURL=fileapi.css.map */

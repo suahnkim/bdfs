@@ -1,0 +1,17 @@
+<script src="<?php echo COM_ASSETS_PATH; ?>/script/jquery.form.min.js<?php echo CSS_JS_UPDATE_DATE; ?>"></script>
+<script src="<?php echo COM_ASSETS_PATH; ?>/script/jquery.browser.mobile.js<?php echo CSS_JS_UPDATE_DATE; ?>"></script>
+<script src="<?php echo COM_ASSETS_PATH; ?>/script/popper.min.js<?php echo CSS_JS_UPDATE_DATE; ?>"></script>
+<script src="<?php echo COM_ASSETS_PATH; ?>/script/bootstrap.min.js<?php echo CSS_JS_UPDATE_DATE; ?>"></script>
+<script src="<?php echo COM_ASSETS_PATH; ?>/script/bootstrap-datepicker.min.js<?php echo CSS_JS_UPDATE_DATE; ?>"></script>
+<script src="<?php echo COM_ASSETS_PATH; ?>/script/nprogress.js<?php echo CSS_JS_UPDATE_DATE; ?>"></script>
+<script src="<?php echo COM_ASSETS_PATH; ?>/script/select2.min.js<?php echo CSS_JS_UPDATE_DATE; ?>"></script>
+<script src="<?php echo COM_ASSETS_PATH; ?>/script/nanoscroller.js<?php echo CSS_JS_UPDATE_DATE; ?>"></script>
+<script src="<?php echo COM_ASSETS_PATH; ?>/script/jquery.magnific-popup.min.js<?php echo CSS_JS_UPDATE_DATE; ?>"></script>
+<script src="<?php echo COM_ASSETS_PATH; ?>/script/jquery.placeholder.js<?php echo CSS_JS_UPDATE_DATE; ?>"></script>
+<script src="<?php echo COM_ASSETS_PATH; ?>/script/jquery.filepicker.js<?php echo CSS_JS_UPDATE_DATE; ?>"></script>
+<script src="<?php echo COM_ASSETS_PATH; ?>/script/pnotify.custom.js<?php echo CSS_JS_UPDATE_DATE; ?>"></script>
+<script src="<?php echo COM_ASSETS_PATH; ?>/script/theme.js<?php echo CSS_JS_UPDATE_DATE; ?>"></script>
+<script src="<?php echo COM_ASSETS_PATH; ?>/script/theme.init.js<?php echo CSS_JS_UPDATE_DATE; ?>"></script>
+<!--<script src="<?php /*echo COM_ASSETS_PATH; */?>/script/module.validation.js<?php /*echo CSS_JS_UPDATE_DATE; */?>"></script>-->
+<script src="<?php echo COM_ASSETS_PATH; ?>/script/common.js<?php echo CSS_JS_UPDATE_DATE; ?>"></script>
+<script src="<?php echo COM_ASSETS_PATH; ?>/script/custom.js<?php echo CSS_JS_UPDATE_DATE; ?>"></script>

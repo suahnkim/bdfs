@@ -1,0 +1,206 @@
+@charset "utf-8";
+
+@import url("default.css");
+
+/* common */
+
+#wrap {width:1530px; margin:0 auto; overflow:hidden;}
+
+#top  {width:100%; height:66px; border-bottom:1px solid #e6e6e6;}
+#top  .gnb {width:1530px; margin:0 auto; overflow:hidden;}
+#top  .gnb  .logo {width:225px; float:left;}
+#top  .gnb  .top_nav {width:350px; float:left;}
+#top  .gnb  .top_search {width:380px; }
+#top  .gnb  .top_right {float:right; text-align:right}
+
+
+#snb  {width:225px; float:left;}
+
+#contents {width:1305px; float:left;}
+
+
+#foot {width:100%; overflow:hidden; background:#5a5a5a}
+#foot .informationbom {width:90%; margin:0 auto;  font-size:14px; color:#666; font-weight:bold; overflow:visible;}
+#foot .informationbom .inforbtn {border:1px solid #dcdcdc; background:#fff; font-size:12px; margin-top:-7px; padding:5px 10px; border-radius:5px; box-sizing:border-box;}
+
+
+
+
+/* contents POP */
+.conPop {width:600px; overflow:hidden;background:#fff; }
+.conPop .tit {width:100%; height:52px; padding:12px 0 0 25px; font-size:16px; color:#fff; background-color: #7973df; /* For browsers that do not support gradients */  background-image: linear-gradient(to right, #7973df , #2bb2e2); /* Standard syntax (must be last) */}
+.conPop .contop {padding:25px; border-bottom:1px solid #dbdbdb; overflow:hidden;}
+.conPop .contop .contit {font-size:22px; ; color:#000; margin:0 0 20px 0}
+.conPop .contop .contit img {vertical-align:middle;}
+.conPop .contop .datepay {border-bottom:1px solid #dbdbdb; overflow:hidden; margin:0 0 25px 0}
+.conPop .contop .datepay .uploadDate {width:50%; height:35px; float:left; font-size:16px; color:#666}
+.conPop .contop .datepay .conpay {width:50%; height:35px; float:left; font-size:20px; color:#7973df; font-weight:bold;text-align:right}
+.conPop .contop .btnbox {width:100%; margin:25px 0 0 0; overflow:hidden; }
+.conPop .contop .btnbox button.btn_close {width:265px; height:60px; border:1px solid #7973df; background:#fff; font-size:20px; color:#7973df; font-weight:500; margin-right:20px;}
+.conPop .contop .btnbox button.btn_download {width:265px; height:60px; border:1px solid #7973df; background:#7973df; font-size:20px; color:#fff; }
+.conPop .conbom {background:#f0f0f0; padding:25px; }
+.conPop .conbom .containBox01 {background:#fff; border:1px solid #dbdbdb;overflow:hidden;}
+.conPop .conbom .containBox01 ul.sty01 {width:100%; height:45px; overflow:hidden; background:#f9f9f9; border-bottom:1px solid #7973df; padding-top:11px}
+.conPop .conbom .containBox01 ul.sty01 li {height:45px; float:left;font-size:14px; color:#000; font-weight:500}
+.conPop .conbom .containBox01 ul.sty01 li:nth-child(1) {width:60%; padding-left:25px}
+.conPop .conbom .containBox01 ul.sty01 li:nth-child(2),.conPop .conbom .containBox01 ul.sty01 li:nth-child(3) {width:20%; text-align:center}
+.conPop .conbom .containBox01 ul.sty02 {overflow:hidden;border-bottom:1px solid #dbdbdb;}
+.conPop .conbom .containBox01 ul.sty02 li {height:45px; float:left;font-size:14px; color:#666;padding-top:11px}
+.conPop .conbom .containBox01 ul.sty02 li:nth-child(1) {width:60%; padding-left:25px}
+.conPop .conbom .containBox01 ul.sty02 li:nth-child(2),.conPop .conbom .containBox01 ul.sty02 li:nth-child(3) {width:20%; text-align:center}
+.conPop .conbom .containBox01 button.btn_listmore {width:498px; height:40px; background:#fbf5e1; margin:25px; border:1px solid #ece2c0; font-size:14px; color:#786420}
+.conPop .conbom .containBox02 {background:#fff; border:1px solid #dbdbdb; overflow:hidden;padding:25px; margin-top:25px;}
+
+
+
+
+
+
+
+
+
+/* main */
+.main_chg  {width:100%; height:150px; position:relative;}
+.main_chg  .chgbg   {width:100%; height:80px; background:#303644}
+.main_chg  .btn_chg {width:90%; height:84px; background:#ffbb29; border:1px solid #303644; font-size:28px; font-weight:bold; color:#000; border-radius:10px;box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.5); position:absolute; top:35px; left:20px; z-index:3; vertical-align:middle}
+.main_chg  .btn_chg img {width:27px; margin-top:7px}
+.main_chg  .chgtxts  {font-size:13px; color:#666; margin-top:50px; text-align:center;}
+
+.mcon   {width:100%; overflow:hidden; margin:30px auto}
+.mcon   li   {height:50px; padding-top:15px; font-size:18px; font-weight:bold; border-bottom:1px solid #d5d5d5; background:url('/img/icon_arrow.png') no-repeat right; background-size:8px;box-sizing:border-box}
+.mcon   li   img {width:22px; margin:0 15px;}
+
+
+/* button */
+.btn_freechg {width:100%; height:70px; background:#f8f8f8; border:1px solid #d5d5d5; font-size:24px; color:#000; border-radius:5px;letter-spacing:-1px;  }
+.btn_freechg img {width:36px; vertical-align:middle}
+.btn_sg {width:100%; height:84px; background:#ffbb29; border:1px solid #303644; font-size:28px; font-weight:700; color:#000; border-radius:10px;box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3); }
+.btnType05 {width:50%; height:45px; font-size:16px; color:#000; font-weight:700; line-height:110%; letter-spacing:-1.5px; background:#f8f8f8; border:1px solid #dcdcdc; border-radius:10px; margin-bottom:5px;}
+.btn_mem {width:100%; height:70px; background:#ffbb29; border:1px solid #303644; font-size:28px;color:#000; border-radius:10px;box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3); }
+.btn_search {width:100%; height:45px; font-size:16px;  font-weight:700; line-height:110%; letter-spacing:-1.5px;background:#f3f3f3; border:1px solid #dcdcdc; border-radius:40px; margin-bottom:5px;}
+.btnLine {width:100%; text-align:center; margin-top:30px;}
+.btn_sg02 {width:100%; height:84px; background:#ffbb29; padding-top:25px; border:1px solid #303644; border-radius:10px;box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3); box-sizing:border-box }
+.btn_sg02 a {font-size:28px; font-weight:700; color:#000; line-height:120%; vertical-align:middle}
+
+
+.sub_tit  {width:100%; height:80px; background:#303644; text-align:center; padding-top:15px;}
+.sub_tit  li   {display:inline-block; border-radius:40px; padding:15px 20px;line-height:100%; }
+.sub_tit  li.on { border:2px solid #ffbb29; font-size:20px; color:#fff; text-align:center;}
+.sub_tit  li.off { border:2px solid #a4abbb; font-size:20px; color:#a4abbb; text-align:center;}
+
+.sub_tit02  {width:100%; text-align:center; padding:30px 0 20px 0}
+.sub_tit02 p   {display:inline-block; border:2px solid #ffbb29; font-size:20px; font-weight:bold; border-radius:40px; padding:15px 20px;line-height:100%;letter-spacing:-1px;}
+
+/* 카드 등록 */
+.cardtit   {width:100%; font-size:15px; margin:10px 0 5px 0}
+.cardinp {width:100%; height:34px; vertical-align:middle}
+.cardinp input{width:70px; height:32px; background:#f8f8f8; border:1px solid #bababa;  margin:0 10px 15px 0; vertical-align:middle; text-align:center;}
+.cardinp input:last-child {margin:0 0 15px 0}
+
+
+/* 설정 */
+.setbox  {width:100%; height:170px; position:relative;}
+.setbox  .setbg   {width:100%; height:80px; background:#303644}
+.setbox  .setsignal {width:90%; height:160px; background:#f7f7f7; border:1px solid #303644; border-radius:10px; position:absolute; top:10px; left:20px; z-index:3; text-align:center}
+.setbox  .setsignal .pushtit   {display:inline-block; border-bottom:3px solid #ffbc2c; text-align:center; padding-top:25px; margin-bottom:20px;  font-size:20px; font-weight:bold; line-height:90%; letter-spacing:-1px;}
+.setbox  .setsignal .pushline {width:100%; height:40px; font-size:16px; font-weight:bold; letter-spacing:-1px; text-align:left; padding:0 0 0 20px; box-sizing:border-box}
+.setbox  .setsignal .pushline img {float:right; width:45px; margin-right:20px;}
+
+.setbox  .servicelay {width:90%; position:absolute; top:10px; left:20px; z-index:3; overflow:hidden; }
+.setbox  .servicebox { padding:15px; background:#f7f7f7; border:1px solid #303644; border-radius:10px;text-align:center; overflow:hidden;box-sizing:border-box}
+.setbox  .servicebox .servicetit   {display:inline-block; border-bottom:3px solid #ffbc2c; text-align:center; margin:10px 0 ; font-size:20px; font-weight:bold; line-height:90%; letter-spacing:-1px;}
+.setbox  .servicebox .service01 {text-align:center; font-size:14px; letter-spacing:-1px;}
+.setbox  .servicebox .service02 {width:100%; margin:15px 0 0 0; overflow:hidden; padding-top:20px; border-top:1px dotted #303644;}
+.setbox  .servicebox .service02 li {font-size:16px; line-height:120%; font-weight:bold; margin-bottom:10px; text-align:left}
+
+
+.guidebox {width:100%; box-sizing:border-box; border:1px solid #dcdcdc;  border-radius:10px; padding:15px; overflow:hidden;}
+.guidebox .guideLeft {width:12%; float:left; }
+.guidebox .guideLeft .numbox {display:inline-block; width:30px; height:30px; background:#303644; color:#fff; font-weight:bold; text-align:center; padding-top:5px;  border-radius:50%; box-sizing:border-box; }
+.guidebox .guideRight {width:88%; float:left; overflow:hidden;}
+.guidebox .guideRight li:nth-child(1) {width:100%; font-size:18px; font-weight:bold; border-bottom:1px solid #efefef; padding:0 0 10px 0;}
+.guidebox .guideRight li:nth-child(2) {width:100%; font-size:12px; padding:10px 0 0 0;}
+.downarrow {width:100%; padding:5px 0; text-align:center; font-size:20px; color:#ddd}
+.guidenote  {width:100%; margin:10px 0 0 0;font-size:12px; line-height:130%;}
+.guidenote::before {content:"- "}
+.guidenote:last-child {margin-bottom:20px;}
+
+.snstit   {width:150px; background:#fff; border:2px solid #ffbc2c; text-align:center; margin:30px auto 10px auto; padding:10px; font-size:18px; font-weight:bold; line-height:90%; letter-spacing:-1px; border-radius:30px; }
+.kakaoplus  {overflow:hidden; text-align:center; font-size:22px;background:#f7f7f7; border-radius:10px; padding:20px; line-height:140%; }
+.kakaoplustxt   {font-size:11px;  line-height:140%; margin:100px 0 0 20px}
+
+.setbtn   {}
+.setbtn   li   {height:30px; border-bottom:1px solid #dedede; background:url('../img/icon_arrow.png') no-repeat 100% 20px; background-size:8px; padding:10px; font-weight:bold; vertical-align:middle; cursor:pointer}
+.setbtn   li img {width:30px; margin:0 10px 0 0;vertical-align:middle}
+
+.setbtn2   {}
+.setbtn2   li   {height:30px; border-bottom:1px solid #dedede; background:url('../img/icon_arrow.png') no-repeat 100% 20px; background-size:8px; padding:15px 0 0 10px;  cursor:pointer}
+
+/* 자주묻는 질문 */
+table.tablest01 {width:100%; margin:0; padding:0; }
+table.tablest01 td {font-size:14px; border-bottom:1px solid #d9d9d9; padding:10px 10px 10px 0; vertical-align:middle; line-height:160%}
+table.tablest01 td .q {width:30px; height:30px; background:#00addf; border-radius:30px; font-size:15px; color:#fff; text-align:center; margin:0 0 0 10px; padding-top:5px; box-sizing:border-box }
+table.tablest01 td .a {width:30px; height:30px; background:#ffbb29; border-radius:30px; font-size:15px; color:#fff;text-align:center; margin:0 0 0 10px; padding-top:5px; box-sizing:border-box; border:none;}
+
+.accordion_sub {display:none; background:#f8f8f8; border:none;}
+
+
+/* 회원 */
+ul.memberlay   {width:100%; overflow:hidden; margin-top:40px; }
+ul.memberlay   li  {width:100%; overflow:hidden; margin-bottom:10px; font-size:18px; font-weight:bold; }
+.member_inp01    {width:25%; height:45px; float:left; font-size:15px; padding-top:12px; box-sizing:border-box;vertical-align:middle; letter-spacing:-0.5px;}
+.member_inp02    {width:73%; height:45px; float:left; background:#f8f8f8; border:1px solid #bababa; border-radius:5px; padding:0 10px; margin-left:2%; box-sizing:border-box}
+.member_inp03    {width:51%; height:45px; float:left; background:#f8f8f8; border:1px solid #bababa; border-radius:5px; padding:0 10px; margin-left:2%;box-sizing:border-box}
+.member_inp04    {width:20%; height:45px; float:left; background:#303644; border:none; border-radius:5px; margin-left:2%; font-size:14px; color:#fff;box-sizing:border-box}
+.member_inp05    {width:35%; height:45px; float:left; background:#a4abbb; border:none; border-radius:5px; margin-left:2%; font-size:14px; color:#fff; font-weight:bold; border:1px solid #6c7384; box-sizing:border-box}
+.member_inp06    {width:73%; height:45px; padding-top:12px; float:left; background:#a4abbb; border:none; border-radius:5px; margin-left:2%; border:1px solid #6c7384; text-align:center; box-sizing:border-box}
+.member_inp06 a { font-size:14px; color:#fff !important; font-weight:bold; text-decoration:none;  }
+.member_inp08    {width:73%; float:left; margin-left:2%; font-size:15px; box-sizing:border-box}
+.member_inp09    {width:100%; height:45px; float:left; background:#f8f8f8; border:1px solid #bababa; border-radius:5px; padding:0 10px; margin-bottom:5px; box-sizing:border-box}
+.member_inp10    {width:52%; height:45px; float:left; background:#f8f8f8; border:1px solid #bababa; border-radius:5px; padding:0 10px; margin-bottom:5px;  font-size:15px; box-sizing:border-box}
+.member_inp11    {width:45%; height:45px; float:left; background:#303644; border:none; border-radius:5px; margin-left:2%; font-size:14px; color:#fff;box-sizing:border-box}
+.member_sbtn  {text-align:center; font-size:15px; color:#3a3a3a; margin:20px 0}
+
+.agreementbox {background:#f3f3f3; padding:10px 20px 5px 20px; margin:20px 0}
+.agreementbox p  {width:100%; vertical-align:middle;margin:0 0 5px 0; font-size:12px;}
+.agreementbox p  input {vertical-align:middle;}
+.agreementbox p .btn_detail  {float:right; background:#565656; border:0;padding:5px; border-radius:5px; font-size:10px; line-height:130%; color:#fff; box-sizing:border-box}
+.policyst {white-space:pre-line; text-align:left; font-size:12px;}
+
+
+/* 모달팝업 */
+
+.Pstyle {width:90%; border:5px solid #ffbb29; opacity: 0; display: none; position: relative; padding: 20px; background-color: #fff; margin: 15% auto; border-radius:50px; box-sizing:border-box;}
+.b-close { position: absolute; right: 0; top:0;display: inline-block; cursor: pointer;}
+.popcon {text-align:center; padding:20px 0}
+.popcon02 {height:300px; padding:20px 0;overflow-y:auto;}
+
+
+
+/* 인트로 */
+.introbg  {background:#303644}
+.intrologo   {text-align:center;}
+.intrologo img {margin-top:30%}
+.introbtn {width:100%; position:fixed; bottom:20px; text-align:center }
+.introbtn  button   {width:90%; height:84px; background:#ffbb29; border:1px solid #303644; font-size:28px; font-weight:bold; color:#000; border-radius:10px;box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.5);}
+
+/* 충전하기 */
+.chargtxt01 {font-size:16px; font-weight:bold; margin-top:20px;}
+.chargtxt02 {font-size:12px;width:100%; overflow:hidden;}
+.chargtxt02 .txtleft:before {content:"· "; float:left; width:3%}
+.chargtxt02 .txtright {float:left; width:97%}
+.chargtxt03 {width:100%; font-size:16px; text-align:center; padding:15px 0; overflow:hidden;}
+.chargtxt03 input {vertical-align:middle;}
+.chargpricebox {width:100%; overflow:hidden; padding:20px 0; text-align:center; font-size:20px; font-weight:bold; border-top:1px solid #f6f6f6; }
+.chargpricebox .chargprice {width:130px; height:38px; background:#f8f8f8; border:1px solid #303644; vertical-align:middle;font-size:18px; text-align:center;}
+.chargpricebox .cpbtn {width:38px; height:40px; margin:0 2px;  background:#a4abbb; border:1px solid #303644; font-size:18px; color:#fff; padding-top:10px; box-sizing:border-box}
+
+
+/* 카드신청 */
+.cardappliimg {width:100%; padding:20px 0 0 0; overflow:hidden;}
+.cardappliimg .cardappLeft {width:30%; float:left;}
+.cardappliimg .cardappLeft img {width:85%; border:1px solid #dcdcdc;}
+.cardappliimg .cardappRight {width:70%;  float:left; }
+.cardappliimg .cardappRight .cardapplitxt01  {font-size:24px; font-weight:bold; line-height:120%; padding:20px 0}
+.cardappliimg .cardappRight .cardapplitxt02  {font-size:12px; line-height:150%;}
+.appguidecon02 {width:95%; margin:0 auto; padding:30px 0; font-size:13px;}
