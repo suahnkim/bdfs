@@ -9,9 +9,6 @@ The same code can be found @ gitlab: https://gitlab.com/suahnkim/bdfs and gitee:
 ## Code structure
 Description of the codes and their folder locations
 - blockchain-system
-  - smart-contract
-  - chainlinker
-  - etc
 - dfs
 - storage-node
 - search-node
