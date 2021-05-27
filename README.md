@@ -1,6 +1,5 @@
 # BDFS: Blockchain based Distributed File System [![Build Status](https://img.shields.io/travis/npm/npm/latest.svg?style=flat-square)](https://travis-ci.org/npm/npm) 
-> p2p based large file sharing system with a reward layer 
-
+p2p based large file sharing system with a reward layer. 
 Useful for supporting large file sharing via p2p protocols. Users who help to download files earn payment proportional to their work. 
 
 # Code Repositories
